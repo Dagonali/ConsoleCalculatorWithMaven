@@ -25,4 +25,9 @@ public class CalculatorTest {
         assertTrue(calculator.summe(-10, -15) == -25);
     }
 
+    @Test
+    public void testSummeNegativUndPositive(){
+        assertTrue(calculator.summe(10, -30) == -20);
+    }
+
 }
