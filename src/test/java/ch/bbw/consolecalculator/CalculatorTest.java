@@ -40,4 +40,10 @@ public class CalculatorTest {
         assertTrue(calculator.quotient(6, 0) == 0);
     }
 
+    @Test
+    public void testDivisionNegativNullOK()
+        throws ArithmeticException {
+        assertTrue(calculator.quotient(-4, 1) == -4);
+    }
+
 }
