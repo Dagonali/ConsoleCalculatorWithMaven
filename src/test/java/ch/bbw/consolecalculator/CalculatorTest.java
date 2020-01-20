@@ -41,7 +41,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testDivisionNegativNullOK()
+    public void testDivisionNegativUndPositivOK()
         throws ArithmeticException {
         assertTrue(calculator.quotient(-4, 1) == -4);
     }
@@ -50,5 +50,12 @@ public class CalculatorTest {
     public void testDivisionZweiNegativ(){
         assertTrue(calculator.quotient(-4,-1) == 4);
     }
+
+    @Test(expected = ArithmeticException.class)
+    public void testDivisionMitNull(){
+        assertTrue(calculator.quotient(8, 0) == 0);
+    }
+
+
 
 }
