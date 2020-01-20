@@ -10,4 +10,8 @@ public class Calculator {
         return minuend - subtrahend;
     }
 
+    public int quotient(int divident, int divisor){
+        return divident / divisor;
+    }
+
 }
