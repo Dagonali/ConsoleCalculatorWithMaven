@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeAll;
 
+import javax.print.DocFlavor;
+
 import static org.junit.Assert.assertTrue;
 
 public class CalculatorTest {
@@ -59,6 +61,11 @@ public class CalculatorTest {
     @Test
     public void testDivisionWithTwoMAX_VALUE(){
         assertTrue(calculator.quotient(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
+    }
+
+    @Test
+    public void testDivisionWithTwoMIN_VALUE(){
+        assertTrue(calculator.quotient(Integer.MIN_VALUE, Integer.MIN_VALUE) == 1);
     }
 
 }
