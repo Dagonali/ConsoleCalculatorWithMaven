@@ -28,6 +28,36 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSummeNegativUndPositive(){
+        assertTrue(calculator.summe(10, -30) == -20);
+    }
+
+    @Test
+    public void testSummeZweiNull(){
+        assertTrue(calculator.summe(0, 0) == 0);
+    }
+
+    @Test
+    public void testSummeZweiMAX_VALUE(){
+        assertTrue(calculator.summe(Integer.MAX_VALUE, Integer.MAX_VALUE) == -2);
+    }
+
+    @Test
+    public void testSummeZweiMIN_VALUE(){
+        assertTrue(calculator.summe(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
+    }
+
+    @Test
+    public void testSummeMAX_VALUEundMIN_VALUE(){
+        assertTrue(calculator.summe(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
+    }
+
+    @Test
+    public void testSummeMAX_VALUEundNegativ(){
+        assertTrue(calculator.summe(Integer.MAX_VALUE, -5) == 2147483642);
+    }
+
+    @Test
     public void testSubtraktionZweiPositivIsOK(){
         assertTrue(calculator.differenz(5, 3) == 2);
     }
