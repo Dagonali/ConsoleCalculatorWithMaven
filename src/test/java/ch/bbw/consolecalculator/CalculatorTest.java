@@ -2,17 +2,27 @@ package ch.bbw.consolecalculator;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
 
 import static org.junit.Assert.assertTrue;
 
 public class CalculatorTest {
 
-    Calculator testee;
+    Calculator calculator;
+
+    @Before
+    public void setUp(){
+        calculator = new Calculator();
+    }
 
     @Test
     public void testSummeZweiPositivIsOK(){
-        testee = new Calculator();
-        assertTrue(testee.summe(10, 25) == 35);
+        assertTrue(calculator.summe(10, 25) == 35);
+    }
+
+    @Test
+    public void testSummeZweiNegativOK(){
+        assertTrue(calculator.summe(-10, -15) == -25);
     }
 
 }
