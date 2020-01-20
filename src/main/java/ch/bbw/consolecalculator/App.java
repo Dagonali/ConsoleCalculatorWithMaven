@@ -19,5 +19,6 @@ public class App
         System.out.println("==================\n");
 
         System.out.println("Summe " + valueA + " + " + valueB + " = " + calculator.summe(valueA, valueB));
+        System.out.println("Subtraktion " + valueA + " - " + valueB + " = " + calculator.differenz(valueA, valueB));
     }
 }

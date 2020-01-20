@@ -6,4 +6,8 @@ public class Calculator {
         return summand1 + summand2;
     }
 
+    public int differenz(int minuend, int subtrahend) {
+        return minuend - subtrahend;
+    }
+
 }
