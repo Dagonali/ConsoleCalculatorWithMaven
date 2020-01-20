@@ -68,4 +68,9 @@ public class CalculatorTest {
         assertTrue(calculator.quotient(Integer.MIN_VALUE, Integer.MIN_VALUE) == 1);
     }
 
+    @Test
+    public void testDivisionMAX_VALUEwithOne(){
+        assertTrue(calculator.quotient(Integer.MAX_VALUE, 1) == 2.147483647E9);
+    }
+
 }
