@@ -40,4 +40,9 @@ public class CalculatorTest {
         assertTrue(calculator.summe(Integer.MAX_VALUE, Integer.MAX_VALUE) == -2);
     }
 
+    @Test
+    public void testSummeZweiMIN_VALUE(){
+        assertTrue(calculator.summe(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
+    }
+
 }
