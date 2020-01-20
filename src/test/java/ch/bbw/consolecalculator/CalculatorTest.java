@@ -30,4 +30,9 @@ public class CalculatorTest {
         assertTrue(calculator.summe(10, -30) == -20);
     }
 
+    @Test
+    public void testSummeZweiNull(){
+        assertTrue(calculator.summe(0, 0) == 0);
+    }
+
 }
