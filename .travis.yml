@@ -1,10 +1,6 @@
 language: java
 sudo: false
 script: mvn install
-deploy:
-  provider: releases
-  api_key:
-    secure: nm+eQLIR4Ep9fC5WAuWnsVnxic/qxUuPcurckH8+8H1MLZrsjDV7S3aa+z5musnLvhgu5E72fBk2YeoVR8HLZdhPk9bz9cdGNnHLpQ1bWO/rr55VNy0Co0EHnZEE+/17fEJkBOkB6ni8LQgRXCwQmcpy4DR6qSjHkMOt0FitSOBe0Jsq6wD5slatIQljw77lAQaBBRsMl8uP9iw/CrzB3NbTsGpOuHdq9qw+gRF9Rr5HG/Aig010HiEEXuA5uOAuk/ttC0sYtHb32gR6UbIg2NvkNdRigmlGYA5P36Q5vUHhebGwuK0Ufhdu09ZJCLecRQKmFzV1G3/19h//Uw0Z21SlgIQDX8EVI7kx4F0540fYKVZhKhBM0z13fMAd7UA5sLw9QAUQh15IR6PDhXGk4kOTuFYmiU88kPkfsGlxW0XosZWwWjfucyz1oI/nBwDAsKiQG3lqsyavl8azB0HiRb/R6TVWrfcHw0Va//DXec0AO+J+hoZexztvanTBumh661g7JoTyVw/NCV/st+SBgQJ1CWheZyZIGP746cVtx9enzm3RgP8OkoQQByyWZkvPvg/A9FhSzGVzlZXqt/FifTWPq3xjVPNgAMTNOjB0SPxYwLx7WM89Zh6aO72Ubxy91NknH08OHTKWF/v5HWNhjMBXJwhoMcgrIQK814O19b4=
-  file: "/home/travis/.m2/repository/ch/bbw/02_ConsoleCalculatorWithMaven/0.0.1-SNAPSHOT/02_ConsoleCalculatorWithMaven-0.0.1-SNAPSHOT.jar"
-  on:
-    repo: Dagonali/ConsoleCalculatorWithMaven
+before_deploy:
+  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+  - git tag $TRAVIS_TAG
