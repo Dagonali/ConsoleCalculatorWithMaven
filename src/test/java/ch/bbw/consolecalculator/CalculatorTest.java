@@ -56,6 +56,9 @@ public class CalculatorTest {
         assertTrue(calculator.quotient(8, 0) == 0);
     }
 
-
+    @Test
+    public void testDivisionWithTwoMAX_VALUE(){
+        assertTrue(calculator.quotient(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
+    }
 
 }
