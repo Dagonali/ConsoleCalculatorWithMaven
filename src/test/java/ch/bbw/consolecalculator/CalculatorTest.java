@@ -6,6 +6,13 @@ import org.junit.jupiter.api.BeforeAll;
 
 import static org.junit.Assert.assertTrue;
 
+/**
+ *
+ * @author Ali Da Silva Ouederni
+ * @version 20. Jan
+ *
+ */
+
 public class CalculatorTest {
 
     Calculator calculator;
