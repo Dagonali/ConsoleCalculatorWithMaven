@@ -8,21 +8,21 @@ import static org.junit.Assert.assertTrue;
 
 public class CalculatorTest {
 
-    Calculator testee;
+    Calculator calculator;
 
     @Before
     public void setUp(){
-        testee = new Calculator();
+        calculator = new Calculator();
     }
 
     @Test
     public void testSummeZweiPositivIsOK(){
-        assertTrue(testee.summe(10, 25) == 35);
+        assertTrue(calculator.summe(10, 25) == 35);
     }
 
     @Test
     public void testSummeZweiNegativOK(){
-        assertTrue(testee.summe(-10, -15) == -25);
+        assertTrue(calculator.summe(-10, -15) == -25);
     }
 
 }
