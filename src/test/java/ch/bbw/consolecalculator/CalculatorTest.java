@@ -46,4 +46,9 @@ public class CalculatorTest {
         assertTrue(calculator.quotient(-4, 1) == -4);
     }
 
+    @Test
+    public void testDivisionZweiNegativ(){
+        assertTrue(calculator.quotient(-4,-1) == 4);
+    }
+
 }
