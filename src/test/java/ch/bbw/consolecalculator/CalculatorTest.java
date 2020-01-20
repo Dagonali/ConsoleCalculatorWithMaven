@@ -40,5 +40,9 @@ public class CalculatorTest {
         assertTrue(calculator.differenz(10, -30) == 40);
     }
 
+    @Test
+    public void testSubtraktionZweiNull(){
+        assertTrue(calculator.differenz(0,0) == 0);
+    }
 
 }
