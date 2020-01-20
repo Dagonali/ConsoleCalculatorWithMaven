@@ -35,4 +35,10 @@ public class CalculatorTest {
         assertTrue(calculator.differenz(-5, -2) == -3);
     }
 
+    @Test
+    public void testSubtraktionPositivUndNegativ(){
+        assertTrue(calculator.differenz(10, -30) == 40);
+    }
+
+
 }
