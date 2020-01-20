@@ -60,6 +60,9 @@ public class CalculatorTest {
         assertTrue(calculator.differenz(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
     }
 
-
+    @Test
+    public void testSubtraktionMAX_VALUEundNull(){
+        assertTrue(calculator.differenz(Integer.MAX_VALUE, 1) == 2147483646);
+    }
 
 }
