@@ -50,4 +50,9 @@ public class CalculatorTest {
         assertTrue(calculator.differenz(Integer.MAX_VALUE, Integer.MAX_VALUE) == 0);
     }
 
+    @Test
+    public void testSubtraktionZweiMIN_VALUE(){
+        assertTrue(calculator.differenz(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
+    }
+
 }
