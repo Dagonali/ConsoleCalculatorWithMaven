@@ -35,4 +35,9 @@ public class CalculatorTest {
         assertTrue(calculator.differenz(-5, -2) == -3);
     }
 
+    @Test(expected = ArithmeticException.class)
+    public void testDivisionZweiPositivOK(){
+        assertTrue(calculator.quotient(6, 0) == 0);
+    }
+
 }
