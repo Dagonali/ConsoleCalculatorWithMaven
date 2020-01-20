@@ -37,6 +37,36 @@ public class CalculatorTest {
         assertTrue(calculator.differenz(-5, -2) == -3);
     }
 
+    @Test
+    public void testSubtraktionPositivUndNegativ(){
+        assertTrue(calculator.differenz(10, -30) == 40);
+    }
+
+    @Test
+    public void testSubtraktionZweiNull(){
+        assertTrue(calculator.differenz(0,0) == 0);
+    }
+
+    @Test
+    public void testSubtraktionZweiMAX_VALUE(){
+        assertTrue(calculator.differenz(Integer.MAX_VALUE, Integer.MAX_VALUE) == 0);
+    }
+
+    @Test
+    public void testSubtraktionZweiMIN_VALUE(){
+        assertTrue(calculator.differenz(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
+    }
+
+    @Test
+    public void testSubtraktionMAX_VALUEundMIN_VALUE(){
+        assertTrue(calculator.differenz(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
+    }
+
+    @Test
+    public void testSubtraktionMAX_VALUEundNull(){
+        assertTrue(calculator.differenz(Integer.MAX_VALUE, 1) == 2147483646);
+    }
+
     @Test(expected = ArithmeticException.class)
     public void testDivisionZweiPositivOK(){
         assertTrue(calculator.quotient(6, 0) == 0);
